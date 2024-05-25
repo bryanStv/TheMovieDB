@@ -1,5 +1,6 @@
 package movies.themoviedb;
 
+import movies.themoviedb.service.PeliculaService;
 import movies.themoviedb.ui.Login;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
@@ -21,11 +22,9 @@ public class TheMovieDbApplication {
 
         EventQueue.invokeLater(() -> {
             // Obtenemos los objetos form a través de Spring
-            //LoginUI loginUI = context.getBean(LoginUI.class);
-            //loginUI.setVisible(true);
-            Login login = context.getBean(Login.class);
-            login.main();
-            //System.out.println(AnimeService.urlImagen("naruto"));
+            PeliculaService.urlPosterPelicula("deadpool");
+            //Login login = context.getBean(Login.class);
+            //login.main();
         });
 
     }
